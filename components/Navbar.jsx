@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
 const Navbar = () => {
 
@@ -12,14 +12,14 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto">
                         <Link href="/"><a className="nav-link ms-3 active">Home</a></Link>
-                        <Link href="/"><a className="nav-link ms-3 active">Projects</a></Link>
-                        <Link href="/"><a className="nav-link ms-3 active">Events</a></Link>
-                        <Link href="/"><a className="nav-link ms-3 active">Team</a></Link>
-                        <Link href="/"><a className="btn-custom ms-3 px-3 pt-2">Contact Us</a></Link>
+                        <Link href="/projects"><a className="nav-link ms-3 active">Projects</a></Link>
+                        <Link href="/events"><a className="nav-link ms-3 active">Events</a></Link>
+                        <Link href="/team"><a className="nav-link ms-3 active">Team</a></Link>
+                        <Link href="/#contact-form-scroll-point"><button className=" btn-custom ms-3 px-3 pt-1">Contact Us</button></Link>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </div >
+        </nav >
     );
 
 };

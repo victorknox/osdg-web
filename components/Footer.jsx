@@ -4,7 +4,6 @@ import { faFacebook, faGithub, faLinkedin, faInstagram } from "@fortawesome/free
 const Footer = () => {
 
     return (
-
         <footer className='footer py-5'>
             <div className="d-flex flex-sm-row flex-column justify-content-center align-items-center">
                 <div className='col-4 col-md-3 my-3 order-2 order-sm-1'>
@@ -16,10 +15,10 @@ const Footer = () => {
                 </div>
                 <div className='d-flex flex-column justify-content-center order-1 order-sm-2 col-3 col-md-3 my-3'>
                     <div className="d-flex flex-row  justify-content-center">
-                        <h3 className='social-link mx-2'><FontAwesomeIcon icon={faFacebook} /></h3>
-                        <h3 className='social-link mx-2'><FontAwesomeIcon icon={faGithub} /></h3>
-                        <h3 className='social-link mx-2'><FontAwesomeIcon icon={faLinkedin} /></h3>
-                        <h3 className='social-link mx-2'><FontAwesomeIcon icon={faInstagram} /></h3>
+                        <h2 className='social-link mx-2' onClick={() => { window.open('https://www.facebook.com/groups/185567594878116', '_blank') }}><FontAwesomeIcon icon={faFacebook} /></h2>
+                        <h2 className='social-link mx-2' onClick={() => { window.open('https://github.com/OSDG-IIITH', '_blank') }}><FontAwesomeIcon icon={faGithub} /></h2>
+                        <h2 className='social-link mx-2' onClick={() => { window.open('https://www.linkedin.com/company/74330374', '_blank') }}><FontAwesomeIcon icon={faLinkedin} /></h2>
+                        <h2 className='social-link mx-2' onClick={() => { window.open('https://www.instagram.com/osdg.iiith', '_blank') }}><FontAwesomeIcon icon={faInstagram} /></h2>
                     </div>
                 </div>
                 <div className='col-2 my-3 text-end order-sm-3 d-none d-sm-block'>

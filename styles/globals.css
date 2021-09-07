@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;700;900&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;700;900&family=Roboto:wght@300&display=swap');
 
 :root {
   --primary: #2E303E;
@@ -73,11 +73,14 @@ body::-webkit-scrollbar-thumb {
   font-weight: 300;
 }
 
+.layout {
+  padding-top: 50px;
+}
+
 #intro-div {
   /* background-color: #1C1E26; */
   background: radial-gradient(circle at 0vw 100vh, #304154 0%, #1C1E26 20%);
   min-height: 100vh;
-  padding-top: 50px;
   color: white;
 }
 
@@ -85,7 +88,39 @@ body::-webkit-scrollbar-thumb {
   background-color: #EBF4F8;
 }
 
+#featured-div {
+  background: url('../public/Images/FeaturedGraphic.svg') no-repeat, radial-gradient(circle at center, #233242, #1C1E26);
+  background-position: 150% 50%;
+  background-size: 700px;
+  color: white;
+}
+
+#contact-form-scroll-point {
+  margin-top: -55px;
+  padding-top: 55px;
+}
+
+.contact-decorator {
+  background-color: var(--secondary);
+}
+
+.contact-form {
+  background-color: #EBF4F8;
+}
+
 .about-heading {
+  font-weight: 700;
+}
+
+.featured-heading {
+  font-weight: 700;
+}
+
+.featured-sub-heading {
+  color: #D5D8DA;
+}
+
+.contact-heading {
   font-weight: 700;
 }
 
@@ -94,11 +129,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .social-link {
-  color: gray;
+  color: #D5D8DA;
 }
 
 .social-link:hover {
-  color: lightgray;
+  color: white;
   cursor: pointer;
 }
 
@@ -112,4 +147,54 @@ body::-webkit-scrollbar-thumb {
   font-size: 0.9rem;
   text-align: justify;
   text-justify: inter-word;
+}
+
+.card {
+  border-radius: 10px !important;
+}
+
+.acrylic {
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  background-color: rgba(200, 200, 200, .1);
+  transition: background-color .2s ease-in-out;
+}
+
+.acrylic:hover {
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  background-color: rgba(200, 200, 200, .3);
+  cursor: pointer;
+}
+
+.ig-img {
+  border-radius: 10px;
+}
+
+.ig-text {
+  font-size: 0.7rem;
+  color: #D5D8DA;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.ig-likes-comments {
+  color: var(--secondary);
+  font-size: 0.8rem;
+}
+
+.ig-date {
+  color: #D5D8DA;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.event-text {
+  font-size: 0.7rem;
+  font-weight: 100;
+}
+
+.featured-grapic {
+  position: absolute;
+  overflow: hidden;
 }
