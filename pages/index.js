@@ -131,7 +131,6 @@ export async function getStaticProps(context) {
     const dateRegex = new RegExp(/Photo by OSDG, IIIT Hyderabad on (.*?)\./);
 
     const response = await axios.get('https://www.instagram.com/osdg.iiith');
-    console.log(response.data);
     const json = JSON.parse(response.data.match(instagramRegExp)[1]);
     const edges = json.entry_data.ProfilePage[0].graphql.user.edge_owner_to_timeline_media.edges.splice(0, 8);
     const { node } = edges[0];

@@ -1,34 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# OSDG Web
 
-## Getting Started
+The latest iteration of the OSDG website (as of 2021).
 
-First, run the development server:
+Using Next.js with **Incremental Static Regeneration** to rebuild the page once a day on the server and cache the build. The cached webpages are then served to the user.
 
-```bash
+## To run
+
+```
+git clone https://github.com/OSDG-IIITH/osdg-web.git
+cd osdg-web
+npm i
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Also, make a `.env.local` file at the root of the project. Add Mailgun credentials to it as:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+MAILGUN_API_KEY=<API-KEY>
+MAILGUN_DOMAIN=<DOMAIN>
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Caveats
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Getting the Instagram API key from the Facebook Developer Portal is a huge pain, so the current solution is to webscrape the public osdg.iiith webpage on Instagram from the server and extract the data from the HTTP response. The problem with this is that if too many requests are made to Instagram subsequently, the IP address of the device is flagged and Instagram redirects to the Login webpage instead of the posts webpage. So even during development, visit the `/` route as few times as possible. As such the idea of Server Side Rendering has been replaced by Incremental Static Regeneration. If possible though, we'd like to use the Instagram Media API.
 
-## Learn More
+2. Ideally, we'd like to use `nodemailer` to send emails from the contact form. However, Outlook doesn't give `nodemailer` access to send emails, so we can't use that. The current solution is using an API based mail service called MailGun, however, it's not ideal to rely on the free tier forever. An alternate solution would be to set up a Gmail account for OSDG and use it's credentials with `nodemailer`.
 
-To learn more about Next.js, take a look at the following resources:
+3. Upcoming events section is hardcoded. Need to look at API based calender services for this.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Current Progress
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* Homepage is completed (except upcoming events is hardcoded).
