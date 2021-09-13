@@ -31,3 +31,7 @@ MAILGUN_DOMAIN=<DOMAIN>
 ## Current Progress
 
 * Homepage is completed (except upcoming events is hardcoded).
+
+## Contribution Guidelines
+
+Fork the project and work on the branch of the page you are editing. Once done, make a pull request to the branch for that page. **Don't make a PR to master**.
