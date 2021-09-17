@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;700;900&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;700;800;900&family=Roboto:wght@300&display=swap');
 
 :root {
   --primary: #2E303E;
@@ -160,7 +160,7 @@ body::-webkit-scrollbar-thumb {
   transition: background-color .2s ease-in-out;
 }
 
-.acrylic:hover {
+.card.acrylic:hover {
   -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
   background-color: rgba(200, 200, 200, .3);
@@ -197,4 +197,69 @@ body::-webkit-scrollbar-thumb {
 .featured-grapic {
   position: absolute;
   overflow: hidden;
+}
+
+.event-desc {
+  font-weight: 200;
+  font-size: 0.8rem;
+}
+
+.event-card-image {
+  z-index: 1;
+  border-radius: 30px;
+}
+
+.slick-slide {
+  transition: all 1s ease;
+}
+
+.slick-slide:not(.slick-current) {
+  transform: scale(0.7);
+}
+
+.nav-arrow {
+  font-size: 1.5rem;
+}
+
+.nav-arrow:hover {
+  cursor: pointer;
+}
+
+.event-card-image {
+  mix-blend-mode: multiply;
+}
+
+.event-card {
+  transition: transform 500ms ease;
+}
+
+.event-card:not(.is-selected) {
+  transform: scale(0.6);
+}
+
+.event-card:not(.is-selected) .event-desc,
+.event-card:not(.is-selected) .event-date {
+  display: none;
+}
+
+.event-card:not(.is-selected) .acrylic {
+  background-color: transparent;
+}
+
+.flickity-button {
+  background-color: #2E303E;
+  transition: all 0.2s ease;
+}
+
+.flickity-button-icon {
+  fill: #D5D8DA;
+  transform: scale(0.5);
+}
+
+.flickity-button:hover .flickity-button-icon {
+  fill: #2E303E;
+}
+
+.flickity-page-dots .dot {
+  display: none;
 }
