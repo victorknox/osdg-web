@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.css';
+import '../styles/projects.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 import Layout from '../components/Layout';

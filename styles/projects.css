@@ -1,0 +1,40 @@
+.Projects-page {
+    background-color: #EBF4F8;
+}
+
+.card-text {
+  background-color: white;
+}
+
+.right-project {
+  align-items: right;
+  margin-right: 4%;
+  margin-left: 40%;
+}
+
+.left-project {
+  align-items: right;
+  margin-left: 4%;
+  margin-right: 40%;
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 1%;
+}
+
+left > .card-body {
+  margin-left: -3%;
+}
+
+/*
+.right-tag-list{
+  display: inline-block;
+  float:
+  margin-left: -6%;
+}
+
+.left-tag-list{
+
+  padding: 0%;
+} */

@@ -198,7 +198,3 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   overflow: hidden;
 }
-
-.project-list {
-  background-color: #EBF4F8;
-}
