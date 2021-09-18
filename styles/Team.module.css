@@ -1,0 +1,36 @@
+.topDiv {
+    color: black;
+    font-family: 'Archivo',
+        sans-serif;
+}
+
+.teamMemberImage {
+	margin-top: -2em;
+	z-index: 1;
+}
+
+.teamMemberImageContainer {
+	background-color: gray;
+	box-shadow: 1px 5px 2px gray;
+	border-radius: 1em;
+	overflow-y: visible;
+	z-index: -1;
+}
+
+.teamMemberNameTag {
+	background-color: white;
+	box-shadow: 2px 4px 3px gray;
+	margin-top: -1.5em;
+	margin-right: 1.5em;
+	border-radius: 0.5em;
+	z-index: 2;
+	width: max-content;
+}
+
+.teamMemberSocialMediaIcon {
+	color: black;
+	filter: drop-shadow(1px 3px 1px gray);
+}
+
+.teamMemberSocialMediaIcons {
+}
