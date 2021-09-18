@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/projects.css';
 import 'react-toastify/dist/ReactToastify.css';
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
