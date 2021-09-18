@@ -9,11 +9,11 @@ const Right = (props) => {
           <div className="col-md-6">
             <div className="card-body">
               <h5 className="card-title"><b>{project.title}</b></h5>
-              <ul className="tag-list">
-                <li className="badge bg-secondary">{project.tag1}</li>
-                <li className="badge bg-secondary">{project.tag2}</li>
-                <li className="badge bg-secondary">{project.tag3}</li>
-              </ul>
+              <div className="tag-list d-flex justify-content-start" >
+                <span className="tag tag1">{project.tag1}</span>
+                <span className="tag tag2">{project.tag2}</span>
+                <span className="tag tag3" >{project.tag3}</span>
+              </div>
               <p className="card-text">{project.body}</p>
             </div>
             <div className="card-link d-flex justify-content-start" style={{marginLeft: '5px'}}>
@@ -40,11 +40,11 @@ const Left = (props) => {
           <div className="col-md-6">
             <div className="card-body">
               <h5 className="card-title text-end"><b>{project.title}</b></h5>
-              <ul className="tag-list" >
-                <li className="badge bg-secondary">{project.tag1}</li>
-                <li className="badge bg-secondary">{project.tag2}</li>
-                <li className="badge bg-secondary">{project.tag3}</li>
-              </ul>
+              <div className="tag-list d-flex justify-content-end" >
+                <span className="tag tag1">{project.tag1}</span>
+                <span className="tag tag2">{project.tag2}</span>
+                <span className="tag tag3" >{project.tag3}</span>
+              </div>
               <p className="card-text">{project.body}</p>
               {/* <a href="#" class="card-link ">Website?</a> */}
             <div className="card-link d-flex justify-content-end">
