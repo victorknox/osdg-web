@@ -7,7 +7,7 @@ import { faCalendar, faClock } from '@fortawesome/free-regular-svg-icons';
 
 const Events = () => {
 
-    const [selectedEvent, setSelectedEvent] = useState(1);
+    const [selectedEvent, setSelectedEvent] = useState(2);
 
     const eventList = [
         {
@@ -19,6 +19,17 @@ const Events = () => {
             day: "30th May, 2021",
             time: "7:00 PM",
             links: ["link1", "link2", "link3", "link4"],
+            contacts: ["contact1"]
+        },
+        {
+            image: "https://scontent.fdel52-1.fna.fbcdn.net/v/t1.6435-9/211279973_4115224728587158_3360084271440984972_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=825194&_nc_ohc=FXYYDnOEOpMAX9FSoBl&_nc_ht=scontent.fdel52-1.fna&oh=2097068f77e17d0875b7559fe37c346e&oe=616BC792",
+            title: "SummerUp",
+            description: "A month long hackathon with a chance to be win funding to launch a new start up.",
+            longDesc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus voluptas dicta dolore similique accusamus, consequatur eius, provident deleniti rem repudiandae excepturi nesciunt molestias et? Velit, veniam quibusdam officiis tenetur explicabo mollitia quod dolor distinctio deleniti aspernatur corrupti fugiat maxime voluptatem dolores culpa ea similique in est inventore debitis repellendus atque rem. Odit molestiae eius explicabo architecto nemo quibusdam a atque incidunt cumque. Ipsa est cupiditate veniam deserunt, mollitia corrupti! Quisquam impedit voluptatibus ducimus iusto! Nisi voluptate pariatur est fugit repellendus tenetur maxime ex odit. Totam ab, possimus magnam temporibus earum quibusdam esse voluptate rerum commodi accusantium ut, in iste similique.",
+            date: "July 2021",
+            day: "10th July, 2021",
+            time: "All day, for a month",
+            links: ["link1", "link2"],
             contacts: ["contact1"]
         },
         {
