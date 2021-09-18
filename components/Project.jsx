@@ -1,77 +1,56 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const Right = (props) => {
-    const project = props.project;
-    return (
-        <div className="card mb-3" style={{maxWidth: '60%' }} className="right-project">
-        <div className="row g-0">
-          <div className="col-md-6">
-            <div className="card-body">
-              <h5 className="card-title"><b>{project.title}</b></h5>
-              <div className="tag-list d-flex justify-content-start" >
-                <span className="tag tag1">{project.tag1}</span>
-                <span className="tag tag2">{project.tag2}</span>
-                <span className="tag tag3" >{project.tag3}</span>
-              </div>
-              <p className="card-text">{project.body}</p>
-            </div>
-            <div className="card-link d-flex justify-content-start" style={{marginLeft: '5px'}}>
-              <h2 className='gh-link mx-2' onClick={() => { window.open('https://github.com/OSDG-IIITH', '_blank') }}><FontAwesomeIcon icon={faGithub} /></h2>
-            </div>
+
+const ProjectCard = ({ project }) => {
+  return (
+    <>
+      <div className={`d-none d-md-flex flex-row${project.id % 2 ? "-reverse" : ""} mb-5`}>
+        <div className="d-flex flex-column project-img-container justify-content-center col-6 col-lg-5">
+          <img src={project.img} className={`rounded project-img ${project.id % 2 ? "right" : "left"}`} alt="" />
+        </div>
+        <div className={`project-info d-flex flex-column col-6 col-lg-3 justify-content-center align-items-${project.id % 2 ? "start" : "end"}`}>
+          <h4 className="px-2">{project.title}</h4>
+          <div className="tag-list d-flex flex-row justify-content-start">
+            <span className="tag tag1">{project.tag1}</span>
+            <span className="tag tag2">{project.tag2}</span>
+            <span className="tag tag3" >{project.tag3}</span>
           </div>
-          <div className="col-md-6" style={{'z-index': '10'}}>
-            <img src="https://media.discordapp.net/attachments/779991636460699673/888509511252467772/unknown.png" className="img-fluid rounded project-image" alt="..."/>
+          <div className={`card project-desc shadow ${project.id % 2 ? "right" : "left"}`}>
+            <p>{project.body}</p>
           </div>
-          
+          <a href={project.link} target="_blank" className="btn btn-sm text-white btn-info my-2 mx-1"><FontAwesomeIcon icon={faGithub} /> View Source</a>
         </div>
       </div>
-    )
-}
-
-const Left = (props) => {
-    const project = props.project;
-    return (
-        <div className="card mb-3" style={{maxWidth: '60%' }} className="left-project">
-        <div className="row g-0">
-          <div className="col-md-6" style={{'z-index': '10'}}>
-            <img src="https://media.discordapp.net/attachments/779991636460699673/888509511252467772/unknown.png" className="img-fluid rounded project-image" alt="..."/>
-          </div>
-          <div className="col-md-6">
-            <div className="card-body">
-              <h5 className="card-title text-end"><b>{project.title}</b></h5>
-              <div className="tag-list d-flex justify-content-end" >
-                <span className="tag tag1">{project.tag1}</span>
-                <span className="tag tag2">{project.tag2}</span>
-                <span className="tag tag3" >{project.tag3}</span>
-              </div>
-              <p className="card-text">{project.body}</p>
-              {/* <a href="#" class="card-link ">Website?</a> */}
-            <div className="card-link d-flex justify-content-end">
-              <h2 className='gh-link mx-2' onClick={() => { window.open('https://github.com/OSDG-IIITH', '_blank') }}><FontAwesomeIcon icon={faGithub} /></h2>
-            </div>
-            </div>            
-          </div>
+      <div className="d-flex flex-column align-items-center d-md-none project-info mb-5">
+        <h4 className="px-2">{project.title}</h4>
+        <div className="tag-list d-flex flex-row justify-content-start">
+          <span className="tag tag1">{project.tag1}</span>
+          <span className="tag tag2">{project.tag2}</span>
+          <span className="tag tag3" >{project.tag3}</span>
         </div>
+        <div className="project-img-container col-10 shadow">
+          <img src={project.img} alt="" className="img-fluid rounded" />
+        </div>
+        <div className={`project-desc mobile px-3 pt-4 shadow rounded-bottom`}>
+          <p>{project.body}</p>
+        </div>
+        <a href={project.link} target="_blank" className="btn btn-sm text-white btn-info my-2 mx-1"><FontAwesomeIcon icon={faGithub} /> View Source</a>
       </div>
-    )
+    </>
+  );
 }
 
-const ProjectList = (props) => {
-    const projects = props.projects;
-    
-    return ( 
-        <div className="project-list">
-            {projects.map((project) => (
-                <div className="project" key={project.id}>
-                    {project.id % 2 === 0
-                        ? <Right key={project.id.toString()} project={project} />
-                        : <Left key={project.id.toString()} project ={project}/>
-                    }
-                </div>
-            ))}
-        </div>
-     );
+const ProjectList = ({ projects }) => {
+
+  return (
+    <div className="px-5 py-1">
+      {projects.map((p, i) => {
+        p.id = i;
+        return <ProjectCard project={p} key={i} />
+      })}
+    </div>
+  );
 }
 export default ProjectList;
 
