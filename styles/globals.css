@@ -90,7 +90,7 @@ body::-webkit-scrollbar-thumb {
 
 #featured-div {
   background: url('../public/Images/FeaturedGraphic.svg') no-repeat, radial-gradient(circle at center, #233242, #1C1E26);
-  background-position: 150% 50%;
+  background-position: 160% 50%;
   background-size: 700px;
   color: white;
 }
