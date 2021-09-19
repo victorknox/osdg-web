@@ -5,7 +5,7 @@ const Projects = () => {
     const projects = [
         {
             title: 'yamb',
-            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            body: 'Yet Another Music Bot. YAMB is the first of our many community projects. It owes its existence to the question "Why invite Groovy (RIP) to our server, when we can make our own bot?" ',
             tag1: 'bots',
             tag2: 'discord.py',
             tag3: 'In progress',
@@ -14,7 +14,7 @@ const Projects = () => {
         },
         {
             title: 'Carbonite',
-            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            body: 'Tired of looking at the generic markdown codeblocks in Discord? Want to customize the code you send with different themes and choices for syntax hightlighting? Say hello to Carbonite!',
             tag1: 'bots',
             tag2: 'discord.js',
             tag3: 'In progress',
@@ -23,7 +23,7 @@ const Projects = () => {
         },
         {
             title: 'osdg-web',
-            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            body: 'Since the dawn of time, OSDG has relied on PHP for its trusty website. Seems about time that the website got a makeover, with some of the latest tech in the world of web development.',
             tag1: 'webdev',
             tag2: 'Next.js',
             tag3: 'In progress',

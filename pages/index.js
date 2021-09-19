@@ -47,16 +47,9 @@ const Home = ({ postData }) => {
           <h2 className='mx-2 social-link' onClick={() => { window.open('https://www.instagram.com/osdg.iiith', '_blank') }}><FontAwesomeIcon icon={faInstagram} /></h2>
         </div>
         <div className="d-flex flex-column col-11 col-lg-4 justify-content-center ps-3 pe-4 py-3">
-          <h1 className='intro-heading'>Open Source,</h1>
-          <h1 className='intro-heading'>for the sake</h1>
-          <h1 className='intro-heading'>of Open Source</h1>
+          <h1 className='intro-heading'>Open Source Developers Group</h1>
           <span className='my-3' />
-          <p className='intro-text'>As a club for enthusiastic students with a passion for open source, we have started numerous open source initiatives,
-            and plan on starting many more, ensuring you'll find something that is perfectly suited for you. Be it a beginner, or
-            a professional, looking forward to talks, hackathons, learning sessions, community projects, and many more events, we've got you covered at
-            every step of the way in your Open Source journey.</p>
-          <p className='intro-text'>We are the Open Source Development Group, IIIT Hyderabad, Working together on Open Source, for Open Source's sake.</p>
-
+          <p className='intro-text'>Hi! We're OSDG. We like to make stuff, break stuff, and learn new things, which is especially fun when we do it together!</p>
         </div>
         <div className="d-none d-lg-flex flex-column col-7 p-5 justify-content-center">
           <img src="Images/IntroGraphic.svg" alt="" className='img-fluid' />
@@ -69,9 +62,8 @@ const Home = ({ postData }) => {
             <img src="Images/AboutGraphic.svg" alt="" className="img-fluid" />
           </div>
           <div className="d-flex flex-column col-12 col-md-5 justify-content-center">
-            <h6 className='about-text my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quod totam! Sed, iste optio quaerat laudantium corrupti delectus tempora iusto magni maiores odit, sapiente soluta repellendus vitae vero, eligendi beatae quo aut provident. Eius quasi quas eos enim beatae maxime tenetur dolor, tempora molestias, harum, illum deleniti aliquam aliquid cupiditate.</h6>
-            <h6 className="about-text my-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus molestiae deleniti molestias illo. Fugiat laudantium tenetur necessitatibus, aspernatur dolores quisquam voluptate voluptas delectus alias in dolorum totam harum placeat neque.</h6>
-            {/* <button className='btn-custom mt-3'>Sponsor Us</button> */}
+            <h6 className='about-text my-3'>The Open Source Developers Group at IIIT Hyderabad is dedicated to helping student developers improve their skills and contribute to the open-source community in a multitude of ways. Officially, it falls under the Center for Open Source at IIIT-H and is a completely student-run organisation.</h6>
+            <h6 className="about-text my-3">The institution is known for actively participating in global programs like the Google Summer of Code, and we at OSDG are dedicated to encouraging more involvement in such areas. The group also hosts several of its own initiatives, like community projects and seminars, to help cultivate the open-source culture in the student community.</h6>
           </div>
         </div>
       </div>
@@ -83,7 +75,7 @@ const Home = ({ postData }) => {
             <UpcomingEvent eventData={{ image: "https://i.pinimg.com/474x/77/0c/e5/770ce5db197bf1cdf239e49757666480.jpg", title: "Intro to Linux", description: "A beginner friendly introduction to Linux Based Operating Systems for first time users." }} />
           </div>
           <div className="d-flex flex-column align-items-center col-10 col-lg-6 col-xl-5 px-4 featured-sub-heading m-3">
-            <h4 className='mb-4'>Latest Instagram Post</h4>
+            <h4 className='mb-4'>Featured Instagram Post</h4>
             <InstagramPost postData={postData} />
           </div>
         </div>
@@ -133,7 +125,7 @@ export async function getStaticProps(context) {
     const response = await axios.get('https://www.instagram.com/osdg.iiith');
     const json = JSON.parse(response.data.match(instagramRegExp)[1]);
     const edges = json.entry_data.ProfilePage[0].graphql.user.edge_owner_to_timeline_media.edges.splice(0, 8);
-    const { node } = edges[0];
+    const { node } = edges[2];
 
     const date = dateRegex.exec(node.accessibility_caption)[1];
 
