@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
           <div className={`card project-desc shadow ${project.id % 2 ? "right" : "left"}`}>
             <p>{project.body}</p>
           </div>
-          <a href={project.link} target="_blank" className="btn btn-sm text-white btn-info my-2 mx-1"><FontAwesomeIcon icon={faGithub} /> View Source</a>
+          <a href={project.link} target="_blank" rel="noreferrer" className="btn btn-sm text-white btn-info my-2 mx-1"><FontAwesomeIcon icon={faGithub} /> View Source</a>
         </div>
       </div>
       <div className="d-flex flex-column align-items-center d-md-none project-info mb-5">
@@ -35,7 +35,7 @@ const ProjectCard = ({ project }) => {
         <div className={`project-desc mobile px-3 pt-4 shadow rounded-bottom`}>
           <p>{project.body}</p>
         </div>
-        <a href={project.link} target="_blank" className="btn btn-sm text-white btn-info my-2 mx-1"><FontAwesomeIcon icon={faGithub} /> View Source</a>
+        <a href={project.link} target="_blank" rel="noreferrer" className="btn btn-sm text-white btn-info my-2 mx-1"><FontAwesomeIcon icon={faGithub} /> View Source</a>
       </div>
     </>
   );

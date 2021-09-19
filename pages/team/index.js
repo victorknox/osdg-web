@@ -17,9 +17,9 @@ const TeamMemberCard = ({ memberData }) => {
 					</div>
 				</div>
 				<div className="d-flex flex-column justify-content-end fs-4 ms-1">
-					{memberData.web && <a className={styles.teamMemberLinks} target="_blank" href={memberData.web}><FontAwesomeIcon icon={faGlobe} /></a>}
-					{memberData.linkedin && <a className={styles.teamMemberLinks} target="_blank" href={memberData.linkedin}><FontAwesomeIcon icon={faLinkedin} /></a>}
-					{memberData && <a className={styles.teamMemberLinks} target="_blank" href={memberData.github}><FontAwesomeIcon icon={faGithub} /></a>}
+					{memberData.web && <a className={styles.teamMemberLinks} rel="noreferrer" target="_blank" href={memberData.web}><FontAwesomeIcon icon={faGlobe} /></a>}
+					{memberData.linkedin && <a className={styles.teamMemberLinks} rel="noreferrer" target="_blank" href={memberData.linkedin}><FontAwesomeIcon icon={faLinkedin} /></a>}
+					{memberData && <a className={styles.teamMemberLinks} rel="noreferrer" target="_blank" href={memberData.github}><FontAwesomeIcon icon={faGithub} /></a>}
 					<span className="mb-5" />
 				</div>
 			</div>

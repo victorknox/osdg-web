@@ -105,7 +105,7 @@ const Events = () => {
                     <div>
                         <h3 className="">Links</h3>
                         {eventList[selectedEvent].links.length ?
-                            eventList[selectedEvent].links.map((e, i) => <a className="d-block fw-light text-primary" href={e.url} target="_blank" key={i}>{e.text}</a>)
+                            eventList[selectedEvent].links.map((e, i) => <a className="d-block fw-light text-primary" rel="noreferrer" href={e.url} target="_blank" key={i}>{e.text}</a>)
                             : <p className="lead">Stay tuned for updates...</p>}
                     </div>
                     <div>

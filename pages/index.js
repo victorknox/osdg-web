@@ -49,7 +49,7 @@ const Home = ({ postData }) => {
         <div className="d-flex flex-column col-11 col-lg-4 justify-content-center ps-3 pe-4 py-3">
           <h1 className='intro-heading'>Open Source Developers Group</h1>
           <span className='my-3' />
-          <p className='intro-text'>Hi! We're OSDG. We like to make stuff, break stuff, and learn new things, which is especially fun when we do it together!</p>
+          <p className='intro-text'>Hi! We&apos;re OSDG. We like to make stuff, break stuff, and learn new things, which is especially fun when we do it together!</p>
         </div>
         <div className="d-none d-lg-flex flex-column col-7 p-5 justify-content-center">
           <img src="Images/IntroGraphic.svg" alt="" className='img-fluid' />
