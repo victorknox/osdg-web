@@ -35,7 +35,7 @@ const Events = () => {
             day: "10th July, 2021",
             time: "All day",
             links: [{ text: 'SummerUp Official Webpage', url: "https://ecell.iiit.ac.in/summerup/" }],
-            contacts: ["ecell@iiit.ac.in", "osdg"]
+            contacts: ["ecell@iiit.ac.in", "osdg@students.iiit.ac.in"]
         },
         {
             image: "https://i.pinimg.com/474x/77/0c/e5/770ce5db197bf1cdf239e49757666480.jpg",
@@ -98,10 +98,10 @@ const Events = () => {
                         <span><FontAwesomeIcon icon={faClock} /> {eventList[selectedEvent].time}</span>
                     </div>
                     {/* <p className={styles.eventDetails}>{eventList[selectedEvent].longDesc}</p> */}
-                    {eventList[selectedEvent].longDesc.map((d, i) => <p className={styles.eventDetails}>{d}</p>)}
+                    {eventList[selectedEvent].longDesc.map((d, i) => <p className={styles.eventDetails} key={i}>{d}</p>)}
                 </div>
                 <div className="d-none d-md-block border-end border-2 border-dark m-0 p-0" />
-                <div className="d-flex flex-row flex-md-column justify-content-between col-12 col-md-6 col-lg-5 px-5">
+                <div className="d-flex flex-column justify-content-between col-12 col-md-6 col-lg-5 px-3 px-lg-5">
                     <div>
                         <h3 className="">Links</h3>
                         {eventList[selectedEvent].links.length ?

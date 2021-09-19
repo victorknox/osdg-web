@@ -208,7 +208,7 @@ const Team = () => {
 				<h1 className="text-center mt-5 mb-4">Coordinators</h1>
 				<div className="d-flex flex-wrap px-5 justify-content-center mt-3 align-items-end">
 					{coordinators.sort((a, b) => {
-						return a.name < b.name ? -1 : 1;
+						return a.name < b.name ? 1 : -1;
 					}).map((m, i) => <TeamMemberCard memberData={m} key={i} />)}
 				</div>
 				<h1 className="text-center mt-5 mb-4">Design</h1>
