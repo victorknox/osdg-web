@@ -10,29 +10,29 @@ import UpcomingEvent from '../components/UpcomingEvent';
 
 const Home = ({ postData }) => {
 
-  // const [formData, setFormData] = useState({ name: "", email: "", query: "" });
-  // const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", query: "" });
+  const [loading, setLoading] = useState(false);
 
-  // const handleUpdate = ({ target }) => {
-  //   setFormData((currFormData) => ({ ...currFormData, [target.id]: target.value }));
-  // }
+  const handleUpdate = ({ target }) => {
+    setFormData((currFormData) => ({ ...currFormData, [target.id]: target.value }));
+  }
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-  //   try {
-  //     const res = await axios.post('/api/contact', formData);
-  //     toast.success("Email Sent!");
-  //   }
-  //   catch (e) {
-  //     console.log(e);
-  //     toast.error("Unable to send email :(");
-  //   }
-  //   finally {
-  //     setFormData({ name: "", email: "", query: "" });
-  //     setLoading(false);
-  //   }
-  // }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const res = await axios.post('/api/contact', formData);
+      toast.success("Email Sent!");
+    }
+    catch (e) {
+      console.log(e);
+      toast.error("Unable to send email :(");
+    }
+    finally {
+      setFormData({ name: "", email: "", query: "" });
+      setLoading(false);
+    }
+  }
 
   return (
     <>
@@ -80,7 +80,7 @@ const Home = ({ postData }) => {
           </div>
         </div>
       </div>
-      {/* <div id="contact-form-scroll-point" className="d-flex flex-row">
+      <div id="contact-form-scroll-point" className="d-flex flex-row">
         <div className="d-none d-md-flex col-4 flex-column justify-content-center align-items-center contact-decorator">
           <img src="Images/ContactGraphic.svg" alt="" className='img-fluid' width="250" />
         </div>
@@ -107,7 +107,7 @@ const Home = ({ postData }) => {
               <button type="submit" className="btn-custom px-3">Submit</button>}
           </form>
         </div>
-      </div> */}
+      </div>
       <ToastContainer />
     </>
   );

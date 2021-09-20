@@ -19,7 +19,7 @@ const TeamMemberCard = ({ memberData }) => {
 				<div className="d-flex flex-column justify-content-end fs-4 ms-1">
 					{memberData.web && <a className={styles.teamMemberLinks} rel="noreferrer" target="_blank" href={memberData.web}><FontAwesomeIcon icon={faGlobe} /></a>}
 					{memberData.linkedin && <a className={styles.teamMemberLinks} rel="noreferrer" target="_blank" href={memberData.linkedin}><FontAwesomeIcon icon={faLinkedin} /></a>}
-					{memberData && <a className={styles.teamMemberLinks} rel="noreferrer" target="_blank" href={memberData.github}><FontAwesomeIcon icon={faGithub} /></a>}
+					{memberData.github && <a className={styles.teamMemberLinks} rel="noreferrer" target="_blank" href={memberData.github}><FontAwesomeIcon icon={faGithub} /></a>}
 					<span className="mb-5" />
 				</div>
 			</div>
@@ -75,6 +75,13 @@ const Team = () => {
 			github: 'https://github.com/VKohli17',
 			linkedin: 'https://www.linkedin.com/in/vanshpreet-singh-kohli-631a771bb/',
 		},
+		{
+			name: 'Sneha Raju',
+			img: 'Images/Team/SnehaRaju.png',
+			web: null,
+			github: null,
+			linkedin: null,
+		},
 	];
 
 	const outreach = [
@@ -91,6 +98,13 @@ const Team = () => {
 			web: null,
 			github: 'https://github.com/vstflugel',
 			linkedin: null
+		},
+		{
+			name: 'Prayush Rathore',
+			img: 'Images/Team/PrayushRathore.png',
+			web: null,
+			github: 'https://github.com/PrayushPai',
+			linkedin: 'https://www.linkedin.com/mwlite/in/prayush-rathore-2115291b7'
 		}
 	];
 
