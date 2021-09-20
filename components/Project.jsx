@@ -7,9 +7,9 @@ const ProjectCard = ({ project }) => {
     <>
       <div className={`d-none d-md-flex flex-row${project.id % 2 ? "-reverse" : ""} mb-5`}>
         <div className="d-flex flex-column project-img-container justify-content-center col-6 col-lg-5">
-          <img src={project.img} className={`rounded project-img ${project.id % 2 ? "right" : "left"}`} alt="" />
+          <img src={project.img} className={`rounded project-img img-fluid ${project.id % 2 ? "right" : "left"}`} alt="" />
         </div>
-        <div className={`project-info d-flex flex-column col-6 col-lg-3 justify-content-center align-items-${project.id % 2 ? "start" : "end"}`}>
+        <div className={`project-info d-flex flex-column col-6 col-md-5 col-lg-4 justify-content-center align-items-${project.id % 2 ? "start" : "end"}`}>
           <h4 className="px-2">{project.title}</h4>
           <div className="tag-list d-flex flex-row justify-content-start">
             <span className="tag tag1">{project.tag1}</span>

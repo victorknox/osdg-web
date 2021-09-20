@@ -8,7 +8,7 @@ const EventCard = ({ eventData }) => {
     return (
         <div className="d-flex flex-row align-items-center event-card">
             <div className="card" style={{ width: "22rem", backgroundColor: "transparent", border: "none" }}>
-                <img src={eventData.image} className="p-4 event-card-image" />
+                <img src={eventData.image} className="img-fluid event-card-image" />
                 <div className="acrylic text-center pb-1" style={{ borderRadius: "7px", marginTop: "-4rem", paddingTop: "3rem" }}>
                     <h4>
                         {eventData.title}
@@ -34,7 +34,9 @@ const EventCarousel = ({ eventList, setSelectedEvent }) => {
 
     const flickityOptions = {
         initialIndex: 2,
-        wrapAround: true
+        wrapAround: true,
+        pageDots: true,
+        draggable: false
     }
 
     return (

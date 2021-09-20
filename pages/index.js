@@ -47,7 +47,7 @@ const Home = ({ postData }) => {
           <h2 className='mx-2 social-link' onClick={() => { window.open('https://www.instagram.com/osdg.iiith', '_blank') }}><FontAwesomeIcon icon={faInstagram} /></h2>
         </div>
         <div className="d-flex flex-column col-11 col-lg-4 justify-content-center ps-3 pe-4 py-3">
-          <h1 className='intro-heading'>Open Source Developers Group</h1>
+          <h1 className='intro-heading'>Open Source Dev<span className="d-none d-md-inline">elopers</span> Group</h1>
           <span className='my-3' />
           <p className='intro-text'>Hi! We&apos;re OSDG. We like to make stuff, break stuff, and learn new things, which is especially fun when we do it together!</p>
         </div>

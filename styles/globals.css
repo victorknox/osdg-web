@@ -227,7 +227,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .event-card-image {
-  mix-blend-mode: multiply;
+  /* mix-blend-mode: multiply; */
+  transform: scale(0.85);
 }
 
 .event-card {

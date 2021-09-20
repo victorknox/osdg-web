@@ -68,7 +68,7 @@ const Events = () => {
             image: "https://media.discordapp.net/attachments/868064937132568586/888107155679498260/Untitled-1.png?width=701&height=701",
             title: "Open Tech Summit",
             description: "The ultimate Open Source Event with talks, contests and a whole lot of fun!",
-            longDesc: ["Software development is so much more than just web development. And Open Source is present in every single one of these areas. Some of the best software out there is open source, because people who have the know how, work together, of their own voalition, and collaborate to make something amazing.",
+            longDesc: ["Software development is so much more than just making websites and apps, and Open Source is present in every single one of these areas. Some of the best software out there is open source, because people who have the know how, work together, of their own voalition, and collaborate to make something amazing.",
                 "But how on Earth do you go from writing simple print('Hello World') to doing what they do and create amazing software that are used by millions of people everyday? Why not have the people who actually do this answer the question for you?",
                 "Open Tech Summit 2021, is the first of kind of event hosted by OSDG. We'll bring you talks from several speakers from several different professionals in various fields and also give you a chance to showcase your own skills to win amazing prizes in the wide variety of contests that we'll have, ranging from CTFs, GameJams, Quantum Programming and so many more!",],
             date: "Dec 2021",
@@ -89,7 +89,7 @@ const Events = () => {
             </div>
         </div>
         <div className={`${styles.eventData} p-2 p-md-3 p-lg-5 pb-5`}>
-            <h1 className='mb-5 text-center'>{eventList[selectedEvent].title}</h1>
+            <h1 className='mb-5 text-center mt-3'>{eventList[selectedEvent].title}</h1>
             <div className="d-flex flex-column flex-md-row mt-3 justify-content-center">
                 <div className="col-12 col-md-6 col-lg-5 px-md-3 px-lg-5 px-2 ">
                     <h3 className="text-center">Details</h3>
@@ -97,7 +97,6 @@ const Events = () => {
                         <span><FontAwesomeIcon icon={faCalendar} /> {eventList[selectedEvent].day}</span>
                         <span><FontAwesomeIcon icon={faClock} /> {eventList[selectedEvent].time}</span>
                     </div>
-                    {/* <p className={styles.eventDetails}>{eventList[selectedEvent].longDesc}</p> */}
                     {eventList[selectedEvent].longDesc.map((d, i) => <p className={styles.eventDetails} key={i}>{d}</p>)}
                 </div>
                 <div className="d-none d-md-block border-end border-2 border-dark m-0 p-0" />
