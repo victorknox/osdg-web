@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
             <div className="container-fluid py-2">
-                <img src="/Images/BrandLogo.png" height="30" className='ps-0' />
+                <Link href="/"><a><img src="/Images/BrandLogo.png" height="30" className='ps-0' /></a></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
